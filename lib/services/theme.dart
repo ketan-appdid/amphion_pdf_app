@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-Color primaryColor = const Color(0xFF941f37);
-Color secondaryColor = const Color(0xFF941f37).withOpacity(.47);
+Color primaryColor = const Color(0xFFB0CB1f);
+Color secondaryColor = const Color(0xFFB0CB1f).withOpacity(.47);
+Color purpleColor = const Color(0xFF303185);
+
 Color backgroundDark = const Color(0xff231F20);
 Color backgroundLight = const Color(0xffffffff);
 
@@ -69,20 +71,20 @@ class CustomTheme {
     ),
     typography: Typography.material2021(),
     textTheme: TextTheme(
-      labelLarge: GoogleFonts.montserrat(
+      labelLarge: GoogleFonts.robotoCondensed(
         fontWeight: FontWeight.w400,
         color: textSecondary,
         fontSize: 14.0,
       ),
-      displayLarge: GoogleFonts.openSans(fontWeight: FontWeight.w400),
-      displayMedium: GoogleFonts.openSans(fontWeight: FontWeight.w400),
-      displaySmall: GoogleFonts.openSans(fontWeight: FontWeight.w400),
-      titleLarge: GoogleFonts.openSans(fontWeight: FontWeight.w400),
-      titleMedium: GoogleFonts.openSans(fontWeight: FontWeight.w400),
-      titleSmall: GoogleFonts.openSans(fontWeight: FontWeight.w400),
-      bodyLarge: GoogleFonts.openSans(fontWeight: FontWeight.w400),
-      bodyMedium: GoogleFonts.openSans(fontWeight: FontWeight.w400),
-      bodySmall: GoogleFonts.openSans(fontWeight: FontWeight.w400),
+      displayLarge: GoogleFonts.robotoCondensed(fontWeight: FontWeight.w400),
+      displayMedium: GoogleFonts.robotoCondensed(fontWeight: FontWeight.w400),
+      displaySmall: GoogleFonts.robotoCondensed(fontWeight: FontWeight.w400),
+      titleLarge: GoogleFonts.robotoCondensed(fontWeight: FontWeight.w400),
+      titleMedium: GoogleFonts.robotoCondensed(fontWeight: FontWeight.w400),
+      titleSmall: GoogleFonts.robotoCondensed(fontWeight: FontWeight.w400),
+      bodyLarge: GoogleFonts.robotoCondensed(fontWeight: FontWeight.w400),
+      bodyMedium: GoogleFonts.robotoCondensed(fontWeight: FontWeight.w400),
+      bodySmall: GoogleFonts.robotoCondensed(fontWeight: FontWeight.w400),
     ),
   );
 }

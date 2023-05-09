@@ -41,7 +41,7 @@ install_framework()
 
   if [ -L "${source}" ]; then
     echo "Symlinked..."
-    source="$(readlink "${source}")"
+    source="$(readlink -f "${source}")"
   fi
 
   if [ -d "${source}/${BCSYMBOLMAP_DIR}" ]; then
@@ -181,14 +181,10 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Toast/Toast.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/flutter_inappwebview/flutter_inappwebview.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/fluttertoast/fluttertoast.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/path_provider_ios/path_provider_ios.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/shared_preferences_ios/shared_preferences_ios.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/path_provider_foundation/path_provider_foundation.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/shared_preferences_foundation/shared_preferences_foundation.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/sqflite/sqflite.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/url_launcher_ios/url_launcher_ios.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/OneSignalXCFramework/OneSignal.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/OneSignalXCFramework/OneSignalCore/OneSignalCore.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/OneSignalXCFramework/OneSignalExtension/OneSignalExtension.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/OneSignalXCFramework/OneSignalOutcomes/OneSignalOutcomes.framework"
 fi
 if [[ "$CONFIGURATION" == "Profile" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework"
@@ -196,14 +192,10 @@ if [[ "$CONFIGURATION" == "Profile" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Toast/Toast.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/flutter_inappwebview/flutter_inappwebview.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/fluttertoast/fluttertoast.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/path_provider_ios/path_provider_ios.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/shared_preferences_ios/shared_preferences_ios.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/path_provider_foundation/path_provider_foundation.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/shared_preferences_foundation/shared_preferences_foundation.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/sqflite/sqflite.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/url_launcher_ios/url_launcher_ios.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/OneSignalXCFramework/OneSignal.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/OneSignalXCFramework/OneSignalCore/OneSignalCore.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/OneSignalXCFramework/OneSignalExtension/OneSignalExtension.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/OneSignalXCFramework/OneSignalOutcomes/OneSignalOutcomes.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework"
@@ -211,14 +203,10 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Toast/Toast.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/flutter_inappwebview/flutter_inappwebview.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/fluttertoast/fluttertoast.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/path_provider_ios/path_provider_ios.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/shared_preferences_ios/shared_preferences_ios.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/path_provider_foundation/path_provider_foundation.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/shared_preferences_foundation/shared_preferences_foundation.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/sqflite/sqflite.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/url_launcher_ios/url_launcher_ios.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/OneSignalXCFramework/OneSignal.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/OneSignalXCFramework/OneSignalCore/OneSignalCore.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/OneSignalXCFramework/OneSignalExtension/OneSignalExtension.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/OneSignalXCFramework/OneSignalOutcomes/OneSignalOutcomes.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

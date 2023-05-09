@@ -2,8 +2,37 @@
 class Assets {
   Assets._();
 
+  static const String imagesBphConi1 = 'assets/images/bphConi1.png';
+  static const String imagesBphConi1Ref = 'assets/images/bphConi1_ref.png';
+  static const String imagesBphConti1 = 'assets/images/bph_conti1.png';
+  static const String imagesBphConti2 = 'assets/images/bph_conti2.png';
+  static const String imagesBphConti2Ref = 'assets/images/bph_conti2_ref.png';
+  static const String imagesBphConti3 = 'assets/images/bph_conti3.png';
+  static const String imagesBphConti3Ref = 'assets/images/bph_conti3_ref.png';
+  static const String imagesBphConti4 = 'assets/images/bph_conti4.png';
+  static const String imagesBphConti4Ref = 'assets/images/bph_conti4_ref.png';
+  static const String imagesBphConti5 = 'assets/images/bph_conti5.png';
+  static const String imagesBphConti5Ref = 'assets/images/bph_conti5_ref.png';
+  static const String imagesBphConti6 = 'assets/images/bph_conti6.png';
+  static const String imagesBphConti6Ref = 'assets/images/bph_conti6_ref.png';
+  static const String imagesBphTam1 = 'assets/images/bphTam1.png';
+  static const String imagesBphTam1Ref = 'assets/images/bphTam1_ref.png';
+  static const String imagesCoverImage = 'assets/images/cover_image.png';
+  static const String imagesEsurge = 'assets/images/esurge.png';
   static const String imagesExclaim = 'assets/images/exclaim.png';
+  static const String imagesHomeIcon = 'assets/images/home_icon.png';
+  static const String imagesIndexIcon1 = 'assets/images/index_icon_1.png';
+  static const String imagesIndexIcon2 = 'assets/images/index_icon_2.png';
+  static const String imagesIndexIcon3 = 'assets/images/index_icon_3.png';
+  static const String imagesIndexIcon4 = 'assets/images/index_icon_4.png';
+  static const String imagesIndexIcon5 = 'assets/images/index_icon_5.png';
+  static const String imagesIndexIcon6 = 'assets/images/index_icon_6.png';
   static const String imagesLogo = 'assets/images/logo.png';
   static const String imagesPlaceholder = 'assets/images/placeholder.jpg';
+  static const String imagesPlusIcon = 'assets/images/plus_icon.png';
+  static const String imagesRefIcon = 'assets/images/ref_icon.png';
   static const String imagesShimmer = 'assets/images/shimmer.gif';
+  static const String svgsArrow = 'assets/svgs/arrow.svg';
+  static const String svgsArrowHead = 'assets/svgs/arrow_head.svg';
+  static const String svgsArrowJoined = 'assets/svgs/arrow_joined.svg';
 }

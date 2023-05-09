@@ -1,7 +1,11 @@
 import 'dart:async';
+import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_template/services/route_helper.dart';
 import 'package:flutter_template/views/base/custom_image.dart';
+
+import '../start_screen/start_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -15,6 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer.run(() {
+      log("HERE");
       Future.delayed(const Duration(seconds: 2), () {});
       /*if (Get.find<AuthController>().isLoggedIn()) {
         Get.find<AuthController>().getUserProfileData().then((value) {
@@ -51,32 +56,28 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      body: SizedBox(
-        width: size.width,
-        height: size.height,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            const Spacer(),
-            CustomImage(
-              path: Assets.imagesLogo,
-              height: size.height * .3,
-              width: size.height * .3,
+      body: Stack(
+        children: [
+          CustomImage(
+            path: Assets.imagesCoverImage,
+            width: size.width,
+            height: size.height,
+          ),
+          Positioned(
+            bottom: 0,
+            left: 50,
+            child: IconButton(
+              onPressed: () {
+                Navigator.pushReplacement(context, getCustomRoute(child: const IndexScreen()));
+              },
+              icon: const CustomImage(
+                path: Assets.imagesPlusIcon,
+                height: 40,
+                width: 40,
+              ),
             ),
-            const Spacer(flex: 3),
-            Text(
-              "App Title",
-              style: Theme.of(context).textTheme.bodyText1?.copyWith(
-                    fontSize: 26.0,
-                  ),
-            ),
-            Text(
-              "Subtitle",
-              style: Theme.of(context).textTheme.bodyText2,
-            ),
-            const Spacer(),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

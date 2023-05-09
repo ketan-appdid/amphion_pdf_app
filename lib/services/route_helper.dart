@@ -6,7 +6,7 @@ Route getCustomRoute({
   Widget? currentChild,
   bool fullscreenDialog = false,
   bool animate = true,
-  PageTransitionType type = PageTransitionType.rightToLeft,
+  PageTransitionType type = PageTransitionType.fade,
   Alignment? alignment = Alignment.center,
   Duration duration = const Duration(milliseconds: 200),
   Duration reverseDuration = const Duration(milliseconds: 200),

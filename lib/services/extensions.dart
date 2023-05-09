@@ -181,3 +181,12 @@ extension GetRequest on Map {
     return url;
   }
 }
+
+extension Context on BuildContext {
+  ThemeData get theme => Theme.of(this);
+  TextTheme get textTheme => Theme.of(this).textTheme;
+  Color get primaryColor => Theme.of(this).primaryColor;
+  Color get scaffoldBackgroundColor => Theme.of(this).scaffoldBackgroundColor;
+  double get bottomViewInsets => MediaQuery.of(this).viewInsets.bottom;
+// Color get primaryColor => Theme.of(this).copyWith();
+}

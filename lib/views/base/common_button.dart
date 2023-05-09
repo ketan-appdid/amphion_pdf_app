@@ -7,11 +7,13 @@ class CustomButton extends StatelessWidget {
   const CustomButton({
     Key? key,
     this.title,
+    this.prefixIcon,
     this.child,
     required this.type,
     required this.onTap,
     this.disabledColor,
     this.color,
+    this.textColor,
     this.height = 50,
     this.isLoading = false,
     this.radius,
@@ -21,6 +23,9 @@ class CustomButton extends StatelessWidget {
 
   ///Button Title text
   final String? title;
+
+  ///prefix icon
+  final Widget? prefixIcon;
 
   ///Button Title text
   final Widget? child;
@@ -36,6 +41,9 @@ class CustomButton extends StatelessWidget {
 
   ///Button Color
   final Color? color;
+
+  ///Button Text Color
+  final Color? textColor;
 
   ///Button Height
   final double? height;
@@ -80,12 +88,19 @@ class CustomButton extends StatelessWidget {
               return child ??
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 10),
-                    child: Text(
-                      title!,
-                      style: GoogleFonts.montserrat(
-                        color: Colors.white,
-                        fontSize: 16.0,
-                      ),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        prefixIcon ?? const SizedBox.shrink(),
+                        if (prefixIcon != null) const SizedBox(width: 5),
+                        Text(
+                          title!,
+                          style: GoogleFonts.montserrat(
+                            color: textColor ?? Colors.white,
+                            fontSize: 16.0,
+                          ),
+                        ),
+                      ],
                     ),
                   );
             },
@@ -124,7 +139,7 @@ class CustomButton extends StatelessWidget {
                     child: Text(
                       title!,
                       style: GoogleFonts.montserrat(
-                        color: Theme.of(context).primaryColor,
+                        color: textColor ?? Theme.of(context).primaryColor,
                         fontSize: 16.0,
                       ),
                     ),
@@ -151,7 +166,7 @@ class CustomButton extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: Text(
                 title!,
-                style: Theme.of(context).textTheme.button,
+                style: Theme.of(context).textTheme.labelLarge!.copyWith(color: textColor),
               ),
             );
           },
