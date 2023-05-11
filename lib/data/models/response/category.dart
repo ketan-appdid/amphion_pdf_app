@@ -11,13 +11,16 @@ class CategoryModel {
 
 class SubCategoryModel {
   String title;
+  String icon;
   List<SubCategoryImage> images;
 
-  SubCategoryModel({required this.title, this.images = const []});
+  SubCategoryModel({required this.title, required this.icon, this.images = const []});
 }
 
 class SubCategoryImage {
   String image;
   String? reference;
-  SubCategoryImage({required this.image, this.reference});
+  String? extra1;
+  String? extra2;
+  SubCategoryImage({required this.image, this.reference, this.extra1, this.extra2});
 }

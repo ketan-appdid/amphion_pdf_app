@@ -56,6 +56,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
         navigatorKey: navigatorKey,
         themeMode: ThemeMode.light,
         theme: CustomTheme.light,
+        title: 'Amphion VA 2023',
         debugShowCheckedModeBanner: false,
         home: const SplashScreen(),
       ),

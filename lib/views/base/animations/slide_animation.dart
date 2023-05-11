@@ -35,8 +35,8 @@ class _CustomSlideAnimationState extends State<CustomSlideAnimation> with Ticker
   void initState() {
     super.initState();
     _animation = Tween<Offset>(
-      begin: const Offset(-1, 0),
-      end: const Offset(0, 0.0),
+      begin: Offset(widget.start.x, widget.start.y),
+      end: Offset(widget.end.x, widget.end.y),
     ).animate(
       CurvedAnimation(parent: _controller, curve: widget.curve),
     );
