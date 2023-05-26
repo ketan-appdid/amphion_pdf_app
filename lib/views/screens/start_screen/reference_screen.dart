@@ -15,11 +15,13 @@ class ReferenceScreen extends StatelessWidget {
         onTap: () {
           Navigator.pop(context);
         },
-        child: CustomImage(
-          path: image,
-          fit: BoxFit.fill,
-          height: size.height,
-          width: size.width,
+        child: InteractiveViewer(
+          child: CustomImage(
+            path: image,
+            fit: BoxFit.fill,
+            height: size.height,
+            width: size.width,
+          ),
         ),
       ),
     );

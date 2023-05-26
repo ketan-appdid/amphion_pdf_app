@@ -58,10 +58,18 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       body: Stack(
         children: [
-          CustomImage(
-            path: Assets.imagesCoverImage,
-            width: size.width,
-            height: size.height,
+          GestureDetector(
+            onHorizontalDragEnd: (value) {
+              log('${value.primaryVelocity}');
+              if ((value.primaryVelocity ?? 0).isNegative) {
+                Navigator.pushReplacement(context, getCustomRoute(child: const IndexScreen()));
+              }
+            },
+            child: CustomImage(
+              path: Assets.imagesCoverImage,
+              width: size.width,
+              height: size.height,
+            ),
           ),
           Positioned(
             bottom: 0,
