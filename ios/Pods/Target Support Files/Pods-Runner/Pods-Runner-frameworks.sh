@@ -177,9 +177,7 @@ code_sign_if_enabled() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/OrderedSet/OrderedSet.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Toast/Toast.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/flutter_inappwebview/flutter_inappwebview.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/fluttertoast/fluttertoast.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/path_provider_foundation/path_provider_foundation.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/shared_preferences_foundation/shared_preferences_foundation.framework"
@@ -188,9 +186,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Profile" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/OrderedSet/OrderedSet.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Toast/Toast.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/flutter_inappwebview/flutter_inappwebview.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/fluttertoast/fluttertoast.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/path_provider_foundation/path_provider_foundation.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/shared_preferences_foundation/shared_preferences_foundation.framework"
@@ -199,9 +195,7 @@ if [[ "$CONFIGURATION" == "Profile" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/OrderedSet/OrderedSet.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Toast/Toast.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/flutter_inappwebview/flutter_inappwebview.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/fluttertoast/fluttertoast.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/path_provider_foundation/path_provider_foundation.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/shared_preferences_foundation/shared_preferences_foundation.framework"

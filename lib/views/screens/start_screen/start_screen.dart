@@ -139,9 +139,17 @@ class IndexScreen extends StatelessWidget {
             ],
           ),
           SubCategoryModel(
+            title: "DURL",
+            icon: Assets.imagesDuralast,
+            index: 28,
+            images: [
+              SubCategoryImage(image: Assets.imagesAndrologyDurp1, reference: Assets.imagesAndrologyDurp1Ref),
+            ],
+          ),
+          SubCategoryModel(
             title: "DURP",
             icon: Assets.imagesDuraplus,
-            index: 26,
+            index: 29,
             images: [
               SubCategoryImage(image: Assets.imagesAndrologyDurl1, reference: Assets.imagesAndrologyDurl1Ref),
               SubCategoryImage(
@@ -150,14 +158,6 @@ class IndexScreen extends StatelessWidget {
                 extra1: Assets.imagesAndrologyDurl3,
                 extra2: Assets.imagesAndrologyDurl4,
               ),
-            ],
-          ),
-          SubCategoryModel(
-            title: "DURL",
-            icon: Assets.imagesDuralast,
-            index: 28,
-            images: [
-              SubCategoryImage(image: Assets.imagesAndrologyDurp1, reference: Assets.imagesAndrologyDurp1Ref),
             ],
           ),
         ],
@@ -169,7 +169,7 @@ class IndexScreen extends StatelessWidget {
           SubCategoryModel(
             title: "LUP",
             icon: Assets.imagesLupride,
-            index: 29,
+            index: 31,
             images: [
               SubCategoryImage(image: Assets.imagesProstateLup0),
               SubCategoryImage(image: Assets.imagesProstateLup1, reference: Assets.imagesProstateLup1Ref),
@@ -179,7 +179,7 @@ class IndexScreen extends StatelessWidget {
           SubCategoryModel(
             title: "DEGA",
             icon: Assets.imagesDegapride,
-            index: 32,
+            index: 34,
             images: [
               SubCategoryImage(image: Assets.imagesProstateDega1),
               SubCategoryImage(
@@ -195,7 +195,7 @@ class IndexScreen extends StatelessWidget {
           SubCategoryModel(
             title: "CAL",
             icon: Assets.imagesCaluran,
-            index: 36,
+            index: 38,
             images: [
               SubCategoryImage(image: Assets.imagesProstateCal1),
             ],
@@ -203,7 +203,7 @@ class IndexScreen extends StatelessWidget {
           SubCategoryModel(
             title: "ZEL",
             icon: Assets.imagesZelgor,
-            index: 37,
+            index: 39,
             images: [
               SubCategoryImage(image: Assets.imagesProstateZel1, reference: Assets.imagesProstateZel1Ref),
               SubCategoryImage(image: Assets.imagesProstateZel2, reference: Assets.imagesProstateZel2Ref),
@@ -213,7 +213,7 @@ class IndexScreen extends StatelessWidget {
           SubCategoryModel(
             title: "ENZ",
             icon: Assets.imagesEnzyl,
-            index: 40,
+            index: 42,
             images: [
               SubCategoryImage(image: Assets.imagesProstateEnz1),
               SubCategoryImage(image: Assets.imagesProstateEnz2),
@@ -229,7 +229,7 @@ class IndexScreen extends StatelessWidget {
           SubCategoryModel(
             title: "CON I",
             icon: Assets.imagesContiflot,
-            index: 43,
+            index: 45,
             images: [
               SubCategoryImage(image: Assets.imagesPhysician1, reference: Assets.imagesPhysician2),
               SubCategoryImage(image: Assets.imagesPhysician3, reference: Assets.imagesPhysician4),
@@ -238,7 +238,7 @@ class IndexScreen extends StatelessWidget {
           SubCategoryModel(
             title: "TAM",
             icon: Assets.imagesTamdura,
-            index: 45,
+            index: 47,
             images: [
               SubCategoryImage(image: Assets.imagesPhysician5, reference: Assets.imagesPhysician6),
             ],
@@ -246,7 +246,7 @@ class IndexScreen extends StatelessWidget {
           SubCategoryModel(
             title: "MOD",
             icon: Assets.imagesModula,
-            index: 46,
+            index: 48,
             images: [
               SubCategoryImage(image: Assets.imagesPhysician7, reference: Assets.imagesPhysician8),
               SubCategoryImage(image: Assets.imagesPhysician9, reference: Assets.imagesPhysician10),
@@ -255,7 +255,7 @@ class IndexScreen extends StatelessWidget {
           SubCategoryModel(
             title: "MIR",
             icon: Assets.imagesMirago,
-            index: 48,
+            index: 50,
             images: [
               SubCategoryImage(image: Assets.imagesPhysician11),
               SubCategoryImage(image: Assets.imagesPhysician12, reference: Assets.imagesPhysician13),
@@ -266,7 +266,7 @@ class IndexScreen extends StatelessWidget {
           SubCategoryModel(
             title: "CER",
             icon: Assets.imagesCernos,
-            index: 52,
+            index: 54,
             images: [
               SubCategoryImage(image: Assets.imagesPhysician18, reference: Assets.imagesPhysician19),
               SubCategoryImage(image: Assets.imagesPhysician20, reference: Assets.imagesPhysician21),
@@ -275,7 +275,7 @@ class IndexScreen extends StatelessWidget {
           SubCategoryModel(
             title: "DURL",
             icon: Assets.imagesDuralast,
-            index: 54,
+            index: 58,
             images: [
               SubCategoryImage(image: Assets.imagesPhysician22, reference: Assets.imagesPhysician23),
             ],
@@ -283,7 +283,7 @@ class IndexScreen extends StatelessWidget {
           SubCategoryModel(
             title: "DURP",
             icon: Assets.imagesDuraplus,
-            index: 55,
+            index: 59,
             images: [
               SubCategoryImage(
                 image: Assets.imagesPhysician24,
@@ -407,7 +407,7 @@ class IndexScreen extends StatelessWidget {
                                             CustomButton(
                                               type: ButtonType.tertiary,
                                               onTap: () {
-                                                // log("${category.subCategories}");
+                                                log("${subCategory.index}");
                                                 Navigator.push(
                                                     context,
                                                     getCustomRoute(
@@ -534,116 +534,3 @@ class EsurgeScreen extends StatelessWidget {
     );
   }
 }
-
-List<List<Map<String, dynamic>>> subData = [
-  [
-    {
-      "image": "assets/images/contiflot.png",
-      "index": 0,
-    },
-    {
-      "image": "assets/images/contifloi.png",
-      "index": 6,
-    },
-    {
-      "image": "assets/images/tamdura.png",
-      "index": 7,
-    },
-    {
-      "image": "assets/images/modula.png",
-      "index": 8,
-    },
-    {
-      "image": "assets/images/solitral.png",
-      "index": 10,
-    },
-  ],
-  [
-    {
-      "image": "assets/images/mirago.png",
-      "index": 11,
-    },
-    {
-      "image": "assets/images/miragos.png",
-      "index": 14,
-    },
-    {
-      "image": "assets/images/dariten.png",
-      "index": 19,
-    },
-    {
-      "image": "assets/images/cystopen.png",
-      "index": 20,
-    },
-    {
-      "image": "assets/images/tropanxl.png",
-      "index": 22,
-    },
-  ],
-  [
-    {
-      "image": "assets/images/cernos.png",
-      "index": 23,
-    },
-    {
-      "image": "assets/images/duraplus.png",
-      "index": 26,
-    },
-    {
-      "image": "assets/images/duralast.png",
-      "index": 28,
-    },
-  ],
-  [
-    {
-      "image": "assets/images/lupride.png",
-      "index": 29,
-    },
-    {
-      "image": "assets/images/degapride.png",
-      "index": 32,
-    },
-    {
-      "image": "assets/images/caluran.png",
-      "index": 36,
-    },
-    {
-      "image": "assets/images/zelgor.png",
-      "index": 37,
-    },
-    {
-      "image": "assets/images/enzyl.png",
-      "index": 40,
-    },
-  ],
-  [
-    {
-      "image": "assets/images/contiflot.png",
-      "index": 43,
-    },
-    {
-      "image": "assets/images/tamdura.png",
-      "index": 45,
-    },
-    {
-      "image": "assets/images/modula.png",
-      "index": 46,
-    },
-    {
-      "image": "assets/images/mirago.png",
-      "index": 48,
-    },
-    {
-      "image": "assets/images/cernos.png",
-      "index": 52,
-    },
-    {
-      "image": "assets/images/duralast.png",
-      "index": 54,
-    },
-    {
-      "image": "assets/images/duraplus.png",
-      "index": 55,
-    }
-  ],
-];
