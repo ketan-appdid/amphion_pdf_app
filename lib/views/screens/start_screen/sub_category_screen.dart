@@ -451,53 +451,53 @@ class _SubCategoryScreenV2State extends State<SubCategoryScreenV2> {
     [
       {
         "image": "assets/images/lupride.png",
-        "index": 29,
+        "index": 31,
       },
       {
         "image": "assets/images/degapride.png",
-        "index": 32,
+        "index": 34,
       },
       {
         "image": "assets/images/caluran.png",
-        "index": 36,
+        "index": 38,
       },
       {
         "image": "assets/images/zelgor.png",
-        "index": 37,
+        "index": 39,
       },
       {
         "image": "assets/images/enzyl.png",
-        "index": 40,
+        "index": 42,
       },
     ],
     [
       {
         "image": "assets/images/contiflot.png",
-        "index": 43,
-      },
-      {
-        "image": "assets/images/tamdura.png",
         "index": 45,
       },
       {
-        "image": "assets/images/modula.png",
-        "index": 46,
+        "image": "assets/images/tamdura.png",
+        "index": 47,
       },
       {
-        "image": "assets/images/mirago.png",
+        "image": "assets/images/modula.png",
         "index": 48,
       },
       {
-        "image": "assets/images/cernos.png",
-        "index": 52,
+        "image": "assets/images/mirago.png",
+        "index": 50,
       },
       {
-        "image": "assets/images/duralast.png",
+        "image": "assets/images/cernos.png",
         "index": 54,
       },
       {
+        "image": "assets/images/duralast.png",
+        "index": 58,
+      },
+      {
         "image": "assets/images/duraplus.png",
-        "index": 55,
+        "index": 59,
       }
     ],
   ];
@@ -787,38 +787,38 @@ class _SubCategoryScreenV2State extends State<SubCategoryScreenV2> {
                   ),
                 ),
           if (pageController.hasClients)
-            if (pageController.page!.round() != 58)
-              Positioned(
-                left: 60,
-                bottom: 0,
-                child: Row(
-                  children: [
+            // if (pageController.page!.round() != 61)
+            Positioned(
+              left: 60,
+              bottom: 0,
+              child: Row(
+                children: [
+                  IconButton(
+                    onPressed: () {
+                      Navigator.pushReplacement(context, getCustomRoute(child: const IndexScreen()));
+                    },
+                    icon: const CustomImage(
+                      path: Assets.imagesHomeIcon,
+                      height: 40,
+                      width: 40,
+                    ),
+                  ),
+                  if (allImages[pageController.page!.round()].subCategoryIndex != null)
                     IconButton(
                       onPressed: () {
-                        Navigator.pushReplacement(context, getCustomRoute(child: const IndexScreen()));
+                        setState(() {
+                          viewSubCategories = !viewSubCategories;
+                        });
                       },
                       icon: const CustomImage(
-                        path: Assets.imagesHomeIcon,
+                        path: Assets.imagesPlusIcon,
                         height: 40,
                         width: 40,
                       ),
                     ),
-                    if (allImages[pageController.page!.round()].subCategoryIndex != null)
-                      IconButton(
-                        onPressed: () {
-                          setState(() {
-                            viewSubCategories = !viewSubCategories;
-                          });
-                        },
-                        icon: const CustomImage(
-                          path: Assets.imagesPlusIcon,
-                          height: 40,
-                          width: 40,
-                        ),
-                      ),
-                  ],
-                ),
+                ],
               ),
+            ),
           if (pageController.hasClients)
             if (allImages[pageController.page!.round()].reference.isValid)
               Positioned(

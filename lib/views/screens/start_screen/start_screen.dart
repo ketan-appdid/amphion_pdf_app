@@ -388,7 +388,7 @@ class IndexScreen extends StatelessWidget {
                                                     category.title,
                                                     style: context.textTheme.bodyLarge!.copyWith(
                                                       color: Colors.white,
-                                                      fontSize: 24,
+                                                      fontSize: 19,
                                                       fontWeight: FontWeight.bold,
                                                     ),
                                                   ),
@@ -424,7 +424,7 @@ class IndexScreen extends StatelessWidget {
                                                 subCategory.title,
                                                 style: context.textTheme.bodyLarge!.copyWith(
                                                   color: purpleColor,
-                                                  fontSize: 24,
+                                                  fontSize: 20,
                                                   fontWeight: FontWeight.bold,
                                                 ),
                                               ),
