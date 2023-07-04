@@ -943,15 +943,15 @@ class SubCategoryIcon extends StatelessWidget {
 List<SubCategoryImage> allImages = [
   SubCategoryImage(index: 0, subCategoryIndex: 0, image: Assets.new1, title: 'BphConti', reference: null),
   SubCategoryImage(index: 1, subCategoryIndex: 0, image: Assets.new2, title: 'BphConti', reference: Assets.new3),
-  SubCategoryImage(index: 2, subCategoryIndex: 0, image: Assets.new4, title: 'BphConti', reference: Assets.new5),
+  SubCategoryImage(index: 2, subCategoryIndex: 0, image: Assets.new4a, title: 'BphConti', reference: Assets.new5),
   SubCategoryImage(index: 3, subCategoryIndex: 0, image: Assets.new6, title: 'BphConti', reference: Assets.new7),
   SubCategoryImage(index: 4, subCategoryIndex: 0, image: Assets.new8, title: 'BphConti', reference: Assets.new9),
   SubCategoryImage(index: 5, subCategoryIndex: 0, image: Assets.new10, title: 'BphConi', reference: Assets.new11),
   SubCategoryImage(index: 6, subCategoryIndex: 0, image: Assets.new12, title: 'BphTam', reference: Assets.new13),
   SubCategoryImage(index: 7, subCategoryIndex: 0, image: Assets.new14, title: 'BphMod', reference: Assets.new15),
   SubCategoryImage(index: 8, subCategoryIndex: 0, image: Assets.new16, title: 'BphMod', reference: Assets.new17),
-  SubCategoryImage(index: 9, subCategoryIndex: 0, image: Assets.new18, title: 'BphMod', reference: Assets.new19),
-  SubCategoryImage(index: 10, subCategoryIndex: 0, image: Assets.new20, title: 'BphSol', reference: Assets.new21),
+  SubCategoryImage(index: 9, subCategoryIndex: 0, image: Assets.new18a, title: 'BphMod', reference: Assets.new19a),
+  SubCategoryImage(index: 10, subCategoryIndex: 0, image: Assets.new20a, title: 'BphSol', reference: Assets.new21a),
 
   /*-------------------------------------------------------------------------------------------------------------------*/
 
@@ -963,7 +963,7 @@ List<SubCategoryImage> allImages = [
   SubCategoryImage(index: 16, subCategoryIndex: 1, image: Assets.new32, title: 'BladderMirS', reference: Assets.new33),
   SubCategoryImage(index: 17, subCategoryIndex: 1, image: Assets.new34, title: 'BladderMirS'),
   SubCategoryImage(index: 18, subCategoryIndex: 1, image: Assets.new35, title: 'BladderMirS', reference: Assets.new36),
-  SubCategoryImage(index: 19, subCategoryIndex: 1, image: Assets.new37, title: 'BladderDar', reference: Assets.new38),
+  SubCategoryImage(index: 19, subCategoryIndex: 1, image: Assets.new37a, title: 'BladderDar', reference: Assets.new38),
   SubCategoryImage(index: 20, subCategoryIndex: 1, image: Assets.new39, title: 'BladderCys', reference: Assets.new40),
   SubCategoryImage(index: 21, subCategoryIndex: 1, image: Assets.new41, title: 'BladderCys', reference: Assets.new42),
   SubCategoryImage(index: 22, subCategoryIndex: 1, image: Assets.new43, title: 'TROP XR', reference: Assets.new45, extra1: Assets.new44),
@@ -982,16 +982,16 @@ List<SubCategoryImage> allImages = [
   SubCategoryImage(index: 32, subCategoryIndex: 3, image: Assets.new65, title: 'ProstateLup', reference: Assets.new66),
   SubCategoryImage(index: 33, subCategoryIndex: 3, image: Assets.new67, title: 'ProstateLup', reference: Assets.new68),
   SubCategoryImage(index: 34, subCategoryIndex: 3, image: Assets.new69, title: 'ProstateDega'),
-  SubCategoryImage(index: 35, subCategoryIndex: 3, image: Assets.new70, title: 'DEGA', reference: Assets.new73, extra1: Assets.new71, extra2: Assets.new72),
-  SubCategoryImage(index: 36, subCategoryIndex: 3, image: Assets.new74, title: 'ProstateDega'),
-  SubCategoryImage(index: 37, subCategoryIndex: 3, image: Assets.new75, title: 'ProstateDega', reference: Assets.new76),
+  SubCategoryImage(index: 35, subCategoryIndex: 3, image: Assets.new70a, title: 'DEGA', reference: Assets.new73a, extra1: Assets.new71a, extra2: Assets.new72a),
+  SubCategoryImage(index: 36, subCategoryIndex: 3, image: Assets.new74a, title: 'ProstateDega', reference: Assets.new74ref),
+  SubCategoryImage(index: 37, subCategoryIndex: 3, image: Assets.new75a, title: 'ProstateDega', reference: Assets.new76a),
   SubCategoryImage(index: 38, subCategoryIndex: 3, image: Assets.new77, title: 'ProstateCal'),
   SubCategoryImage(index: 39, subCategoryIndex: 3, image: Assets.new78, title: 'ProstateZel', reference: Assets.new79),
-  SubCategoryImage(index: 40, subCategoryIndex: 3, image: Assets.new80, title: 'ProstateZel', reference: Assets.new81),
+  SubCategoryImage(index: 40, subCategoryIndex: 3, image: Assets.new80, title: 'ProstateZel', reference: Assets.new81a),
   SubCategoryImage(index: 41, subCategoryIndex: 3, image: Assets.new82, title: 'ZEL', reference: Assets.new84, extra1: Assets.new83),
   SubCategoryImage(index: 42, subCategoryIndex: 3, image: Assets.new85, title: 'ProstateEnz'),
   SubCategoryImage(index: 43, subCategoryIndex: 3, image: Assets.new86, title: 'ProstateEnz'),
-  SubCategoryImage(index: 44, subCategoryIndex: 3, image: Assets.new87, title: 'ProstateEnz', reference: Assets.new88),
+  SubCategoryImage(index: 44, subCategoryIndex: 3, image: Assets.new87a, title: 'ProstateEnz', reference: Assets.new88a),
 
   /*-------------------------------------------------------------------------------------------------------------------*/
 
@@ -1001,7 +1001,7 @@ List<SubCategoryImage> allImages = [
   SubCategoryImage(index: 47, subCategoryIndex: 4, image: Assets.new93, reference: Assets.new94),
   //
   SubCategoryImage(index: 48, subCategoryIndex: 4, image: Assets.new95, reference: Assets.new96),
-  SubCategoryImage(index: 49, subCategoryIndex: 4, image: Assets.new97, reference: Assets.new98),
+  SubCategoryImage(index: 49, subCategoryIndex: 4, image: Assets.new97a, reference: Assets.new98a),
   //
   SubCategoryImage(index: 50, subCategoryIndex: 4, image: Assets.new99),
   SubCategoryImage(index: 51, subCategoryIndex: 4, image: Assets.new100, reference: Assets.new101),
