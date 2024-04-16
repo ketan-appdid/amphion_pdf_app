@@ -411,10 +411,6 @@ class IndexScreen extends StatelessWidget {
                                                 Navigator.push(
                                                     context,
                                                     getCustomRoute(
-                                                        /*child: SubCategoryScreen(
-                                                          categoryModel: category,
-                                                          index: i,
-                                                        ),*/
                                                         child: SubCategoryScreenV2(
                                                           index: subCategory.index ?? 0,
                                                         ),

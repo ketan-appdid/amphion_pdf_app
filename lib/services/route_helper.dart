@@ -8,8 +8,8 @@ Route getCustomRoute({
   bool animate = true,
   PageTransitionType type = PageTransitionType.fade,
   Alignment? alignment = Alignment.center,
-  Duration duration = const Duration(milliseconds: 200),
-  Duration reverseDuration = const Duration(milliseconds: 200),
+  Duration duration = const Duration(milliseconds: 0),
+  Duration reverseDuration = const Duration(milliseconds: 0),
 }) {
   if (type == PageTransitionType.bottomToTopPop ||
       type == PageTransitionType.topToBottomPop ||

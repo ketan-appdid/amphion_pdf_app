@@ -510,162 +510,179 @@ class _SubCategoryScreenV2State extends State<SubCategoryScreenV2> {
         children: [
           PageView.builder(
             controller: pageController,
+            physics: const NeverScrollableScrollPhysics(),
             onPageChanged: (value) {
-              Future.delayed(const Duration(milliseconds: 500), () {
+              Future.delayed(const Duration(milliseconds: 200), () {
                 setState(() {});
               });
             },
             itemCount: allImages.length,
             itemBuilder: (context, int index) {
-              return Stack(
-                children: [
-                  InteractiveViewer(
-                    panAxis: PanAxis.vertical,
-                    child: CustomImage(
-                      path: allImages[index].image,
-                      fit: BoxFit.fill,
-                      height: size.height,
-                      width: size.width,
+              return GestureDetector(
+                onHorizontalDragEnd: (DragEndDetails? drag) {
+                  log("${drag!.velocity}  $index");
+                  if (drag.velocity.pixelsPerSecond.dx.isNegative) {
+                    if (index != 61) {
+                      pageController.animateToPage(index + 1, duration: const Duration(milliseconds: 100), curve: Curves.ease);
+                    } else {
+                      log("index61");
+                    }
+                  } else {
+                    if (index != 0) {
+                      pageController.animateToPage(index - 1, duration: const Duration(milliseconds: 100), curve: Curves.ease);
+                    }
+                  }
+                },
+                child: Stack(
+                  children: [
+                    InteractiveViewer(
+                      panAxis: PanAxis.vertical,
+                      child: CustomImage(
+                        path: allImages[index].image,
+                        fit: BoxFit.fill,
+                        height: size.height,
+                        width: size.width,
+                      ),
                     ),
-                  ),
-                  if (pageController.hasClients) //
-                    if (pageController.position.haveDimensions)
-                      Builder(builder: (context) {
-                        // log(subCategoryModel.title.getIfValid);
-                        if (allImages[index].title == 'TROP XR') {
-                          return Positioned(
-                            bottom: size.height * .145,
-                            left: size.width * .085,
-                            // right: size.width * .12,
-                            child: Material(
-                              color: Colors.transparent,
-                              elevation: 0,
-                              child: InkWell(
-                                onTap: () {
-                                  Navigator.push(context, getCustomRoute(child: ReferenceScreen(image: allImages[pageController.page!.round()].extra1!)));
-                                },
-                                borderRadius: BorderRadius.circular(20),
-                                child: Ink(
-                                  height: size.height * .38,
-                                  width: size.width * .415,
-                                  decoration: BoxDecoration(
-                                    color: Colors.transparent,
-                                    borderRadius: BorderRadius.circular(20),
+                    if (pageController.hasClients) //
+                      if (pageController.position.haveDimensions)
+                        Builder(builder: (context) {
+                          // log(subCategoryModel.title.getIfValid);
+                          if (allImages[index].title == 'TROP XR') {
+                            return Positioned(
+                              bottom: size.height * .145,
+                              left: size.width * .085,
+                              // right: size.width * .12,
+                              child: Material(
+                                color: Colors.transparent,
+                                elevation: 0,
+                                child: InkWell(
+                                  onTap: () {
+                                    Navigator.push(context, getCustomRoute(child: ReferenceScreen(image: allImages[pageController.page!.round()].extra1!)));
+                                  },
+                                  borderRadius: BorderRadius.circular(20),
+                                  child: Ink(
+                                    height: size.height * .38,
+                                    width: size.width * .415,
+                                    decoration: BoxDecoration(
+                                      color: Colors.transparent,
+                                      borderRadius: BorderRadius.circular(20),
+                                    ),
                                   ),
                                 ),
                               ),
-                            ),
-                          );
-                        }
-                        if (allImages[index].title == 'DURP') {
-                          // log('${allImages[pageController.page!.round()]}');
-                          return Positioned(
-                            bottom: size.height * .23,
-                            left: size.width * .13,
-                            right: size.width * .12,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Material(
-                                  color: Colors.transparent,
-                                  elevation: 0,
-                                  child: InkWell(
-                                    onTap: () {
-                                      Navigator.push(context, getCustomRoute(child: ReferenceScreen(image: allImages[pageController.page!.round()].extra1!)));
-                                    },
-                                    child: Ink(
-                                      height: size.height * .28,
-                                      width: size.width * .32,
-                                      color: Colors.transparent,
-                                    ),
-                                  ),
-                                ),
-                                Material(
-                                  color: Colors.transparent,
-                                  elevation: 0,
-                                  child: InkWell(
-                                    onTap: () {
-                                      Navigator.push(context, getCustomRoute(child: ReferenceScreen(image: allImages[pageController.page!.round()].extra2!)));
-                                    },
-                                    child: Ink(
-                                      height: size.height * .28,
-                                      width: size.width * .34,
-                                      color: Colors.transparent,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          );
-                        }
-                        if (allImages[index].title == 'DEGA') {
-                          return Positioned(
-                            bottom: size.height * .09,
-                            left: size.width * .07,
-                            right: size.width * .09,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Material(
-                                  color: Colors.transparent,
-                                  elevation: 0,
-                                  child: InkWell(
-                                    onTap: () {
-                                      Navigator.push(context, getCustomRoute(child: ReferenceScreen(image: allImages[pageController.page!.round()].extra1!)));
-                                    },
-                                    child: Ink(
-                                      height: size.height * .36,
-                                      width: size.width * .38,
-                                      color: Colors.transparent,
-                                    ),
-                                  ),
-                                ),
-                                Material(
-                                  color: Colors.transparent,
-                                  elevation: 0,
-                                  child: InkWell(
-                                    onTap: () {
-                                      Navigator.push(context, getCustomRoute(child: ReferenceScreen(image: allImages[pageController.page!.round()].extra2!)));
-                                    },
-                                    child: Ink(
-                                      height: size.height * .36,
-                                      width: size.width * .4,
-                                      color: Colors.transparent,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          );
-                        }
-                        if (allImages[index].title == 'ZEL') {
-                          return Positioned(
-                            bottom: size.height * .05,
-                            left: size.width * .265,
-                            // right: size.width * .12,
-                            child: Material(
-                              color: Colors.transparent,
-                              elevation: 0,
-                              child: InkWell(
-                                onTap: () {
-                                  Navigator.push(context, getCustomRoute(child: ReferenceScreen(image: allImages[pageController.page!.round()].extra1!)));
-                                },
-                                borderRadius: BorderRadius.circular(20),
-                                child: Ink(
-                                  height: size.height * .1,
-                                  width: size.width * .47,
-                                  decoration: BoxDecoration(
+                            );
+                          }
+                          if (allImages[index].title == 'DURP') {
+                            // log('${allImages[pageController.page!.round()]}');
+                            return Positioned(
+                              bottom: size.height * .23,
+                              left: size.width * .13,
+                              right: size.width * .12,
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Material(
                                     color: Colors.transparent,
-                                    borderRadius: BorderRadius.circular(20),
+                                    elevation: 0,
+                                    child: InkWell(
+                                      onTap: () {
+                                        Navigator.push(context, getCustomRoute(child: ReferenceScreen(image: allImages[pageController.page!.round()].extra1!)));
+                                      },
+                                      child: Ink(
+                                        height: size.height * .28,
+                                        width: size.width * .32,
+                                        color: Colors.transparent,
+                                      ),
+                                    ),
+                                  ),
+                                  Material(
+                                    color: Colors.transparent,
+                                    elevation: 0,
+                                    child: InkWell(
+                                      onTap: () {
+                                        Navigator.push(context, getCustomRoute(child: ReferenceScreen(image: allImages[pageController.page!.round()].extra2!)));
+                                      },
+                                      child: Ink(
+                                        height: size.height * .28,
+                                        width: size.width * .34,
+                                        color: Colors.transparent,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            );
+                          }
+                          if (allImages[index].title == 'DEGA') {
+                            return Positioned(
+                              bottom: size.height * .09,
+                              left: size.width * .07,
+                              right: size.width * .09,
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Material(
+                                    color: Colors.transparent,
+                                    elevation: 0,
+                                    child: InkWell(
+                                      onTap: () {
+                                        Navigator.push(context, getCustomRoute(child: ReferenceScreen(image: allImages[pageController.page!.round()].extra1!)));
+                                      },
+                                      child: Ink(
+                                        height: size.height * .36,
+                                        width: size.width * .38,
+                                        color: Colors.transparent,
+                                      ),
+                                    ),
+                                  ),
+                                  Material(
+                                    color: Colors.transparent,
+                                    elevation: 0,
+                                    child: InkWell(
+                                      onTap: () {
+                                        Navigator.push(context, getCustomRoute(child: ReferenceScreen(image: allImages[pageController.page!.round()].extra2!)));
+                                      },
+                                      child: Ink(
+                                        height: size.height * .36,
+                                        width: size.width * .4,
+                                        color: Colors.transparent,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            );
+                          }
+                          if (allImages[index].title == 'ZEL') {
+                            return Positioned(
+                              bottom: size.height * .05,
+                              left: size.width * .265,
+                              // right: size.width * .12,
+                              child: Material(
+                                color: Colors.transparent,
+                                elevation: 0,
+                                child: InkWell(
+                                  onTap: () {
+                                    Navigator.push(context, getCustomRoute(child: ReferenceScreen(image: allImages[pageController.page!.round()].extra1!)));
+                                  },
+                                  borderRadius: BorderRadius.circular(20),
+                                  child: Ink(
+                                    height: size.height * .1,
+                                    width: size.width * .47,
+                                    decoration: BoxDecoration(
+                                      color: Colors.transparent,
+                                      borderRadius: BorderRadius.circular(20),
+                                    ),
                                   ),
                                 ),
                               ),
-                            ),
-                          );
-                        }
-                        return const SizedBox.shrink();
-                      }),
-                ],
+                            );
+                          }
+                          return const SizedBox.shrink();
+                        }),
+                  ],
+                ),
               );
             },
           ),
